@@ -1,0 +1,359 @@
+﻿@using studentshub.Models
+@model IEnumerable<institute>
+@{ 
+    Layout = null;
+    }
+@{
+    ViewBag.Title = "home";
+}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My Students Hub </title>
+      <style>
+          .sq {
+              height: 200px;
+              width: 200px;
+          }
+      </style>
+    <!-- Bootstrap core CSS -->
+      <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+	<!-- CSS Implementing Plugins -->
+      <link href="~/Content/flexslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/parallax-slider.css" type="text/css">
+      <link href="~/Content/font-awesome-4.0.3/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+	
+    <link href="~/Content/business-plate.css" rel="stylesheet" />
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+	<div class="top">
+    <div class="container">
+        <div class="row-fluid">
+            <ul class="phone-mail">
+                <li><i class="fa fa-phone"></i><span>074 11 9211 00</span></li>
+                <li><i class="fa fa-envelope"></i><span>bitf12m024@pucit.edu.pk</span></li>
+            </ul>
+              @{
+                  if (Session["email"] == null)
+                  {
+            <ul class="loginbar">
+                <li><a href="Home/login" class="login-btn">Login</a></li>
+                <li class="devider">&nbsp;</li>
+                <li><a href="Home/register" class="login-btn">Register</a></li>
+            </ul>
+                  }
+              }
+        </div>
+    </div>
+	</div>
+	
+    <!-- topHeaderSection -->	
+    <div class="topHeaderSection">		
+    <div class="header">			
+		<div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/Home/"><img src="~/Images/img_03.png" height="30%" width="30%" alt="My web students hub" /></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="Home/">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="Home/register">Registration</a></li>
+                <li><a href="Home/">Subscription</a></li>
+                <li><a href="Home/">Information</a></li>
+                   <li><a href="Home/">Reviews</a></li>
+              </ul>
+            </li>
+            <li><a href="Home/about">About us</a></li>
+            <li><a href="Home/blog">Blog</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+	</div>
+	</div>
+
+    <!-- bannerSection -->
+
+    <div class="bannerSection">
+		<div class="slider-inner">
+			<div id="da-slider" class="da-slider">
+				<div class="da-slide">
+					<h2><i>Student</i> <br> <i>Portal</i> <br> <i>Latest Academic news</i></h2>
+					<p><i>Good bye to lack of Info</i> <br> <i>Say Hello to</i> <br> <i>Mordern technology in use</i></p>
+					<div class="da-img"><img src="~/Images/img_02.jpg" alt="" /></div>
+				</div>
+				
+				<div class="da-slide">
+					<h2><i>Select future institue</i> <br> <i>Be Clear </i> <br> <i>Be specific</i></h2>
+					<p><i>Ask Seniors</i> <br> <i>Tell juniors</i> <br> <i>Be a part of student community</i></p>
+					<div class="da-img"><img src="~/Images/img_04.jpg" alt="" /></div>
+				</div>
+				
+				
+				<div class="da-slide">
+					<h2><i>Find Our Institutes</i> <br> <i>Reviews</i></h2>
+					<p><i>Undergrade institutes </i> <br> <i>Across the country</i></p>
+					<div class="da-img">
+							<iframe src="" width="100%" height="320" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen class="col-md-offset-4 col-md-6"></iframe>
+					</div>
+				</div>
+				<nav class="da-arrows">
+					<span class="da-arrows-prev"></span>
+					<span class="da-arrows-next"></span>		
+				</nav>
+			</div><!--/da-slider-->
+		</div><!--/slider-->
+		<!--=== End Slider ===-->
+
+
+	</div>
+    <!-- highlightSection -->
+    <div class="highlightSection">
+		<div class="container">
+			<div class="row">
+			<div class="col-md-8">
+			 <h2>Our Agenda</h2>
+			 <em> We aim o serve area of education by introducing IT there. </em><br><br>
+			 We aim to bring a very positive revolution in education sector of country by spreading all info about them. WE ARE EDUCTION JOURNALISTS. 
+				</p>
+			</div>
+			<div class="col-md-4 align-right"> 
+			<h4>Ask US. 
+			Ask/share any thing related to academia with us. You are always welcome for this. </h4>
+			<a class="btn btn btn-brand" href="Home/register">Get Registered</a>
+				</p>
+			</div>
+			</div>
+		</div>
+	</div>
+    <!-- bodySection -->
+		<div class="serviceBlock">
+        <div class="services">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+								<img src="~/Images/img_06.jpg" class="sq" title="project one">				
+								<h3><a class="hover-effect" href="/Home/register">Get Register</a></h3>
+							<p>Register youself on our site for all information under one roof.</p>
+					 </div>
+					<div class="col-md-3">
+								<img src="~/Images/img_16.jpg" class="sq" title="project one">
+											
+								<h3>Subscribe Universities</h3>
+							<p>Add institutes to your favorite list.</p>
+					 </div>
+					<div class="col-md-3">
+								<img src="~/Images/img_12.jpg" class="sq" title="project one">
+								
+								<h3>Get Info</h3>
+							<p>Get information about institutes, specially about those you susbcribed.</p>
+					 </div>
+					<div class="col-md-3">
+								<img src="~/Images/img_18.jpg" class="sq" title="project one">
+									
+								<h3>Post Reviews</h3>
+							<p>Post/share your reviews about any institute.</p>
+					 </div>
+				 </div>	
+			</div>
+		</div>
+
+		
+		<div class="testimonails">
+		<div class="container">
+		<blockquote class="">
+                <p>We Aim to help students on intermediate level and want to guide them choose a right institute for them. It's the first step of success.</p>
+                <small>-    H.S. Qadri</small>
+            </blockquote>		
+		</div>
+		</div>
+		
+		<div class="container">
+		<div class="row">
+			<div class="col-md-4"> 
+				<h3 class="title">Why It's BEST portal</h3>
+				
+				<ul>
+					<li>It's the only portal where you can find:</li>
+					<li>24/7 information</li>
+                    <li>Discussion</li>
+				</ul>
+				<p>
+				description of reason 1 . description of reason 1 . 
+description of reason 1 . 	description of reason 1 . description of reason 1 . </p>
+			</div>
+			<div class="col-md-8">
+			<div class="projectList">
+				<h3 class="title">Latest Reviews</h3>
+				<div class="media">
+				  <a class="pull-left" href="#">
+					<img src="~/Images/project1.jpg" class="projectImg" title="project one">
+				  </a>
+				  <div class="media-body">
+					<h4 class="media-heading"><a href="#">Review One</a></h4>
+					<p>
+						I went to uni of punjab and found it superb.
+					</p>
+					<a class="pull-right" href="#">more details</a>
+				  </div>
+				</div>
+				
+					
+				
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>
+    <!-- clientSection -->
+	<div class="container">
+		<h3 class="title">TOP Intitutes | Apply</h3>
+		<div class="clientSection">
+			<div class="row">			
+                
+                    @if (Session["email"] != null)
+                    {
+                          foreach (institute abc in Model)
+                          {    
+                                        <div class="col-md-2">
+                                               <span> @abc.name</span>
+                                                
+                                                 <img src="~/Images/@abc.image" height="150" width="170" >
+                                                <a href="/Dashboard/apply" class="btn btn-success">Apply</a>
+                                                  </div>   
+                          }
+                        
+                    }	
+             
+				</div>
+		</div>
+	 </div>
+
+	
+	<!-- map -->
+	<div id="mainCarousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+	</div>
+
+	<!--------------------------> 
+    <!-- footerTopSection -->
+    <div class="footerTopSection">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-3">
+				<h3>About </h3>
+				<p>
+				StudentsHub<br>
+				<strong>Stay connected </strong> Get all info.
+				</p>
+				
+				
+				
+			  </div>
+			  <div class="col-md-3">
+				<h3>We are </h3>
+				<p>
+					Best service provicer for<br>
+					<strong>cosulatncy </strong> career counculing.
+				</p>
+				<p>
+					Best information provicer for<br>
+					<strong>all institutes </strong> across nation.
+				</p>
+			  </div>
+			  <div class="col-md-3">
+				<h3>Useful Links</h3>
+				<p>
+					<span>This may be the very useful and quick link for proper information</span><br><br>
+					Registration<br>
+					Subscription<br>
+					Information<br>
+                    Reviews<br>
+				</p>
+				<h3>Friends</h3>
+				<p>
+					Yahoo.com<br>
+					Canon
+				</p>
+				
+			  </div>
+			  <div class="col-md-3">
+				<h3>Contact us</h3>
+				<p>
+					<strong>StudentIO pvt Ltd.</strong><br>
+					Sadar Cantt. Lahore<br> Pakistan
+					P : +44 (0) 1234567890<br>
+					E : info@studentIO.com<br>
+					W :	www.studentIO.com<br>
+				</p>
+				<h3>Stay Connected</h3>
+				<p>
+					We are available at all social networks
+				</p>
+					F , t, G, T, Ln, P, Y
+			  </div>
+			</div>
+		</div>
+	</div>
+    <!-- footerBottomSection -->	
+	<div class="footerBottomSection">
+		<div class="container">
+			&copy; 2015, Allright reserved. | Terms and Condition applied 
+			<div class="pull-right"> <a href="index.html"><img height="30%" width="30%" src="~/Images/img_03.png" alt="My students Hub" /></a></div>
+		</div>
+	</div>
+	
+<!-- JS Global Compulsory -->			
+<script type="text/javascript" src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="~/Scripts/modernizr.custom.js"></script>		
+<script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>	
+	
+	<!-- JS Implementing Plugins -->           
+<script type="text/javascript" src="~/Scripts/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="~/Scripts/modernizr.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery.cslider.js"></script> 
+<script type="text/javascript" src="~/Scripts/back-to-top.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery.sticky.js"></script>
+
+<!-- JS Page Level -->           
+<script type="text/javascript" src="~/Scripts/index.js"></script>
+      <script src="~/Scripts/app.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        App.init();
+        App.initSliders();
+        Index.initParallaxSlider();
+    });
+</script>
+
+
+	</body>
+</html>
